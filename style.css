@@ -1,0 +1,1468 @@
+/* ==================================================
+Item:   Stonecold - Flat & Minimalist Portfolio Template
+Author: igdepe
+Email:  igp.ekasuryawan@gmail.com
+--------------------------------|
+
+/* ==================================================
+Color Codes and fonts typography
+--------------------------------|
+
+Original orange : orange;
+
+--------------------------------|
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Lora', serif;
+
+--------------------------------|
+
+/* ==================================================
+Table of content
+--------------------------------|
+
+1. General Style
+2. Loader
+3. Header
+4. Banner Overlay
+5. Main Banner
+6. Section works
+7. Section service
+8. Section client
+9. Section footer
+10. Section intro
+11. Section testimoni
+12. Section contact
+13. Section team
+14. Section work detail
+15. Section Responsive thing
+
+----------------------------------*/
+
+
+/*  ==========================================================================
+1.  General Style
+    -------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+html,body{
+	width: 100%;
+	height: 70%;
+}
+
+/*  ==========================================================================
+2.  Loader
+    -------------------------------- */
+body.loaderbody{
+	overflow: hidden;
+}
+.wraploader{
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background: rgba(0,0,0,0.97);
+	display: table;
+}
+.wraploader .wrapinner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.loader {
+  width: 3em;
+  height: 3em;
+  animation: loaderAnim 1.25s infinite;
+  outline: 1px solid transparent;
+  margin:0 auto;
+}
+.loader #largeBox {
+  height: 3em;
+  width: 3em;
+  background-color: #ECECEC;
+  outline: 1px solid transparent;
+  position: fixed;
+}
+.loader #smallBox {
+  height: 3em;
+  width: 3em;
+  background-color: orange;
+  position: fixed;
+  z-index: 1;
+  outline: 1px solid transparent;
+  animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+}
+
+@keyframes smallBoxAnim {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+@keyframes loaderAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+/*  ==========================================================================
+3.  Header
+    -------------------------------- */
+.header{
+	position: relative;
+	z-index: 3;
+	padding:20px 0;
+}
+.header h1{
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+	margin:0;
+	color:#fff;
+}
+.header h1 a{
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+	margin:0;
+	outline: 0;
+	text-decoration: none;
+	color:#fff;
+}
+.header h1 a:hover{
+	text-decoration: none;
+}
+.header .mobilemenu{
+	display: none;
+	position: absolute;
+	right:20px;
+	bottom:0;
+}
+.header .mobilemenu a{
+	display: block;
+}
+.header .mobilemenu .line{
+	width: 40px;
+	height: 2px;
+	background: #333;
+	margin-bottom:6px;
+}
+.header .mobilemenu .line:nth-of-type(2){
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	opacity: 1;
+}
+.header .opennav .line:nth-of-type(1){
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	position: relative;
+    top: 8px;
+}
+.header .opennav .line:nth-of-type(2){
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+.header .opennav .line:nth-of-type(3){
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	position: relative;
+    bottom: 8px;
+}
+.header nav ul{
+	float:right;
+	margin:0;
+}
+.header nav ul li{
+	float:left;
+	list-style-type:none;
+}
+.header nav ul li a{
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	color:#fff;
+	display: block;
+	font-size: 14px;
+	min-width: 80px;
+	text-align: center;
+	padding:3px 10px 8px 10px;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+.header nav ul li a:after{
+	content: "";
+    width: 80px;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: -4px;
+	background: #ce8705;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transform: translate(-25px,0);
+	-webkit-transform: translate(-25px,0);
+	-moz-transform: translate(-25px,0);
+	-ms-transform: translate(-25px,0);
+	opacity:0;
+}
+.header nav ul li a:hover:after{
+	content: "";
+    width: 80px;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: -4px;
+	background: #ce8705;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+	-moz-transform: translate(0,0);
+	-ms-transform: translate(0,0);
+	opacity: 1;
+}
+.header nav ul li a.active{
+	border-bottom:4px solid orange;
+}
+.fixtop {
+    position: fixed;
+    z-index: 3;
+    padding: 20px 0;
+    background: rgba(68, 68, 68, 0.9);
+}
+
+/*  ==========================================================================
+4.  Banner Overlay
+    -------------------------------- */
+.overlay{
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+    height: 470px;
+}
+.overlay .wraptext{
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.overlay .wraptext .wraptextinner{
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.overlay .wraptext .wraptextinner h1{
+	margin:0;
+	color:orange;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.overlay .wraptext .wraptextinner h2{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+	font-size: 60px;
+	margin:0;
+	color:#fff;
+	text-align: center;
+}
+.overlay .wraptext .wraptextinner p{
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 18px;
+	color:#fff;
+	text-align: center;
+	width: 500px;
+	display: block;
+	margin:50px auto 0;
+}
+.overlay .wraptextabout{
+	width: 1140px;
+    height: 100%;
+    display: table;
+    margin: 0 auto;
+}
+.overlay .wraptextabout .wraptextinnerabout{
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.overlay .wraptextabout .wraptextinnerabout h1{
+	margin:0;
+	color:#c5c5c5;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+    font-size: 40px;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.overlayfull{
+	height: 100%;
+}
+
+/*  ==========================================================================
+5.  Main Banner
+    -------------------------------- */
+.banner{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+    height: 470px;
+}
+
+.bannerfull{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*  ==========================================================================
+6.  Section works
+    -------------------------------- */
+section.works{
+	padding:80px 0;
+}
+section.works h2{
+	margin:0 0 25px;
+	font-weight: 900;
+	font-size: 35px;
+	position: relative;
+}
+section.works p{
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 18px;
+	margin:10px 0 40px ;
+	width: 600px;
+}
+section.works p span{
+	color: orange;
+}
+section.works .filters-button-group{
+	text-align: center;
+	margin:0 0 25px;
+}
+section.works .filters-button-group button{
+	background: transparent;
+	border:2px solid #636363;
+	color:#636363;
+	padding:4px 8px;
+	margin-bottom:5px;
+	outline: 0;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+section.works .filters-button-group button:hover{
+	background: #636363;
+	color:#fff;
+	border: 2px solid #8c8a8a;
+}
+section.works .filters-button-group button.is-checked{
+	background: orange;
+	border:2px solid orange;
+	color:#fff;
+}
+section.works .filters-button-group button.is-checked:hover{
+	background: #af7204;
+}
+section.works .grid {
+  height: 100%;
+}
+section.works .grid-item {
+  float: left;
+  width: 31.6%;
+  margin-bottom:30px;
+  height: 300px;
+  overflow: hidden;
+}
+section.works .grid-item .wraptext{
+	background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section.works .grid-item .wraptext h2{
+	color:#fff;
+	margin:0 0 0 20px;
+	padding:20px 0 10px;
+	font-weight: 600;
+    font-size: 22px;
+    border-bottom:1px solid orange;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+}
+section.works .grid-item .wraptext p{
+	color:#fff;
+	margin:10px 0 0;
+	width: 100%;
+	padding:0 20px 20px 20px;
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 16px;
+	transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(-40px, 20px);
+    -webkit-transform: translate(-40px, 20px);
+    -moz-transform: translate(-40px, 20px);
+    -ms-transform: translate(-40px, 20px);
+    -o-transform: translate(-40px, 20px);
+    opacity: 0;
+}
+section.works .grid-item .wraptext .xline{
+	margin-top:30px;
+	transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+section.works .grid-item .wraptext .xline .line{
+	display: block;
+	width: 50px;
+	height: 1px;
+	background: #fff;
+	margin:10px auto;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+section.works .grid-item .wraptext .xline .line:nth-of-type(1){
+	position: relative;
+	top: 12px;
+}
+section.works .grid-item .wraptext .xline .line:nth-of-type(2){
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+}
+section.works .grid-item.grid-item--width2{
+	width: 65.8%;
+}
+section.works .grid-item.grid-item--height2{
+	height: 630px;
+}
+section.works p.viewworks a{
+	color: #333;
+    text-decoration: none;
+    border: 1px solid orange;
+    padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section.works p.viewworks a:hover{
+	background: orange;
+	color:#fff;
+}
+section.works p.viewworks a:hover span{
+	margin-left:10px;
+	color:#333;
+}
+/*----hover----*/
+section.works .grid-item .wraptexthover h2{
+	color:#fff;
+	margin:0 0 0 20px;
+	padding:20px 0 10px;
+	font-weight: 600;
+    font-size: 22px;
+    border-bottom:1px solid orange;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0, 20px);
+    -webkit-transform: translate(0, 20px);
+    -moz-transform: translate(0, 20px);
+    -ms-transform: translate(0, 20px);
+    -o-transform: translate(0, 20px);
+}
+section.works .grid-item .wraptexthover{
+	background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section.works .grid-item .wraptexthover p{
+	color:#fff;
+	margin:10px 0 0;
+	padding:0 20px 20px 20px;
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 16px;
+	transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0, 20px);
+    -webkit-transform: translate(0, 20px);
+    -moz-transform: translate(0, 20px);
+    -ms-transform: translate(0, 20px);
+    -o-transform: translate(0, 20px);
+    opacity: 1;
+}
+section.works .grid-item .wraptexthover .xline{
+	transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+
+/*  ==========================================================================
+7.  Section service
+    -------------------------------- */
+section.service{
+	padding:80px 0;
+	background: #EBEBEB;
+}
+section.service h2{
+	margin:0 0 25px;
+	font-weight: 900;
+	font-size: 35px;
+	position: relative;
+}
+section.service h2:before{
+	content: "";
+	background: orange;
+	width: 80px;
+	height: 2px;
+	position: absolute;
+	bottom: -15px;
+}
+section.service p{
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 18px;
+	margin:10px 0 40px ;
+	width: 600px;
+}
+section.service p span{
+	color: orange;
+}
+section.service .grid {
+  height: 100%;
+}
+section.service .grid-item {
+  float: left;
+  width: 31.6%;
+  margin-bottom:30px;
+  height: 300px;
+  overflow: hidden;
+}
+section.service .service-item{
+	border:1px solid #333;
+}
+section.service .grid-item img{
+	display: block;
+	margin: 0 auto 0;
+	width: 100px;
+}
+section.service .grid-item .wraptext{
+	padding: 40px;
+	width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section.service .grid-item .wraptext h2{
+	color:#333;
+	text-align: center;
+	margin:0;
+	padding:20px 0 10px;
+	font-weight: 400;
+    font-size: 22px;
+    border-bottom:1px solid #d4d4d4;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+}
+section.service .grid-item .wraptext h2:before{
+	background: transparent;
+}
+section.service .grid-item .wraptext p{
+	color:#333;
+	margin:10px 0 0;
+	padding:0;
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 16px;
+	width: 100%;
+	text-align: center;
+}
+section.service .service-item .wraptext p{
+	color: #808080;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+section.service .service-item:hover img{
+	transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+	transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+	-o-transform: rotateY(360deg);
+}
+section.service .grid-item.grid-item--height2{
+	height: 630px;
+	background: #333;
+	position: relative;
+}
+section.service .grid-item.grid-item--height2 p{
+	color:#fff;
+	text-align: left;
+}
+section.service .grid-item.grid-item--height2 p.nametitle{
+	position: absolute;
+	bottom:20px;
+}
+
+/*  ==========================================================================
+8.  Section client
+    -------------------------------- */
+section.client{
+	padding:80px 0;
+}
+section.client h2{
+	font-weight: 700;
+	text-align: center;
+	margin:0 0 20px 0;
+}
+section.client .line{
+	width: 80px;
+	height: 2px;
+	background: orange;
+	margin:20px auto 40px;
+}
+section.client .owl-theme .owl-dots .owl-dot.active span, 
+section.client .owl-theme .owl-dots .owl-dot:hover span {
+    background: orange;
+}
+
+/*  ==========================================================================
+9.  Section footer
+    -------------------------------- */
+section.footer{
+	padding:80px 0;
+	background: #1B1B1B;
+}
+section.footer ul{
+	text-align: center;
+}
+section.footer ul li{
+	list-style-type: none;
+	display: inline-block;
+}
+section.footer ul li a{
+	display: block;
+	color:#fff;
+	font-size: 20px;
+	text-align: center;
+	padding:10px;
+	transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+}
+section.footer ul li a:hover{
+	color:orange;
+	transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,-8px);
+    -moz-transform: translate(0,-8px);
+    -ms-transform: translate(0,-8px);
+    -o-transform: translate(0,-8px);
+}
+section.footer h6{
+	text-align: center;
+	color:#fff;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+/*  ==========================================================================
+10.  Section intro | about page
+    -------------------------------- */
+section.intro{
+	padding:80px 0;
+}
+section.intro h3{
+	font-size: 20px;
+    color: #b5b4b4;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 0;
+}
+section.intro h2{
+	font-size: 40px;
+    color: #333;
+    font-weight: 700;
+    margin: 5px 0 40px 0;
+}
+section.intro .imgright{
+	height: 450px;
+	width: 350px;
+	display: block;
+	margin:0 auto;
+}
+section.intro .wraplefttext{
+	display: table;
+	height: 450px;
+}
+section.intro .wrapinnerlefttext{
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+section.intro .atag{
+	margin-top:20px;
+}
+section.intro .atag a{
+	color: #333;
+    text-decoration: none;
+    border: 1px solid orange;
+    padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section.intro .atag a span{
+	color:orange;
+}
+section.intro .atag a:hover{
+    background: orange;
+    color: #fff;
+}
+section.intro .atag a:hover span{
+	color:#333;
+	padding-left:10px;
+}
+
+/*  ==========================================================================
+11.  Section testimoni
+    -------------------------------- */
+section.testimoni{
+	padding:80px 0;
+}
+section.testimoni h2{
+	font-weight: 700;
+	text-align: center;
+	margin:0 0 20px 0;
+}
+section.testimoni .line{
+	width: 80px;
+	height: 2px;
+	background: orange;
+	margin:20px auto 40px;
+}
+section.testimoni .owl-theme .owl-dots .owl-dot.active span, 
+section.testimoni .owl-theme .owl-dots .owl-dot:hover span {
+    background: orange;
+}
+section.testimoni .owl-testimoni{
+	overflow: hidden;
+}
+section.testimoni .owl-testimoni img{
+	display: block;
+	margin:0 auto;
+	width: 150px;
+}
+section.testimoni .owl-testimoni p{
+	width: 70%;
+	margin:20px auto;
+	text-align: center;
+}
+section.testimoni .owl-testimoni .owl-item{
+	min-height: 1px;
+    float: left;
+}
+section.testimoni .owl-testimoni .owl-nav{
+	display: none !important;
+}
+
+/*  ==========================================================================
+12.  Section contact
+    -------------------------------- */
+section.contact{
+	padding:80px 0;
+}
+section.contact h2{
+	margin:0 0 25px;
+	font-weight: 900;
+	font-size: 35px;
+	text-align: center;
+}
+section.contact h2:before{
+	content: "";
+	background: orange;
+	width: 80px;
+	height: 2px;
+	position: absolute;
+	bottom: -15px;
+}
+section.contact p{
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 18px;
+	text-align: center;
+	margin:0 auto 50px;
+	width: 620px;
+}
+section.contact p.notif{
+	display: none;
+	color: red;
+    border: 1px solid red;
+}
+section.contact .contactleft{
+	background: orange;
+	display: table;
+	height: 420px;
+	padding:40px;
+}
+section.contact .contactleft ul{
+	margin:0;
+	display: table-cell;
+	vertical-align: middle;
+}
+section.contact .contactleft ul li i.fa{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+}
+section.contact .contactleft ul li{
+	font-size: 18px;
+	color:#404040;
+	list-style-type: none;
+	border-bottom: 1px solid #ce8602;
+}
+section.contact .contactleft ul li:last-child{
+	border-bottom:1px solid transparent;
+}
+section.contact .contactright{
+	background: #f2f2f2;
+	display: table;
+	height: 420px;
+	padding:40px;
+}
+section.contact .contactright form{
+	display: table-cell;
+	vertical-align: middle;
+}
+section.contact .contactright form input[type=text],
+section.contact .contactright form input[type=email],
+section.contact .contactright form input[type=number],
+section.contact .contactright form select,
+section.contact .contactright form textarea{
+	display: block;
+	border:none;
+	box-shadow: none;
+	background: transparent;
+	border-bottom:1px solid #333;
+	width: 100%;
+	margin-bottom:20px;
+	height: 40px;
+	outline: 0;
+}
+section.contact .contactright form textarea{
+	height: auto;
+}
+section.contact .contactright form input[type=text]:focus,
+section.contact .contactright form input[type=email]:focus,
+section.contact .contactright form input[type=number]:focus,
+section.contact .contactright form select:focus,
+section.contact .contactright form textarea:focus{
+	border-bottom:1px solid orange;
+}
+section.contact .contactright form input[type=submit],
+section.contact .contactright form button{
+	color: #333;
+    text-decoration: none;
+    border:none;
+    border: 1px solid orange;
+    padding: 8px 25px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section.contact .contactright form input[type=submit]:hover,
+section.contact .contactright form button:hover{
+	background: orange;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/*  ==========================================================================
+13.  Section team
+    -------------------------------- */
+section.team{
+	padding:80px 0;
+	background: #EBEBEB;
+}
+section.team p{
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 18px;
+	margin:10px 0 40px ;
+	width: 600px;
+}
+section.team .wraptext .teamimg{
+	width: 100%;
+	height: 250px;
+}
+section.team .wraptext h2{
+	margin:10px 0 0;
+	font-size: 22px;
+    font-weight: 700;
+}
+section.team p span {
+    color: orange;
+}
+section.team .wraptext p{
+	width: 100%;
+	margin:0 0 40px;
+	font-size: 18px;
+	color:#6a6a6a;
+}
+section.team .mainteam .wraptext h2{
+	text-align: center;
+	margin:10px 0 0;
+	font-size: 25px;
+}
+section.team .mainteam .wraptext p{
+	text-align: center;
+}
+section.team .wrapsosmed{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: table;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+section.team .wrapsosmed ul{
+	margin:0;
+	padding:0;
+	text-align: center;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+section.team .wrapsosmed ul li{
+	display: inline-block;
+	list-style-type:0;
+	vertical-align: middle;
+}
+section.team .wrapsosmed ul li a i.fa{
+	font-size: 18px;
+}
+section.team .wrapsosmed ul li a{
+	color:#fff;
+	padding:0;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+section.team .wrapsosmedhover{
+	background: rgba(255, 165, 0, 0.62);
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	opacity: 1;
+}
+section.team .wrapsosmedhover ul li a i.fa{
+	font-size: 18px;
+}
+section.team .wrapsosmedhover ul li a{
+	display: block;
+	color:#fff;
+	padding:20px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+section.team .wrapsosmedhover ul li a:hover{
+	color:#404040;
+}
+
+/*  ==========================================================================
+14.  Section work detail
+    -------------------------------- */
+section.workdetail{
+	padding:80px 0;
+}
+section.workdetail .boxdetail{
+	display: table;
+	min-height: 300px;
+}
+section.workdetail .boxfeature{
+	min-height: 272px;
+}
+section.workdetail .boxdetail .wrapdetail{
+	display: table-cell;
+	vertical-align: middle;
+}
+section.workdetail .boxdetail:nth-of-type(2) .wrapdetail{
+	padding:80px;
+	background: #fbfbfb;
+}
+section.workdetail .boxdetail .wrapdetail h2{
+	margin:0 0 25px;
+	font-weight: 900;
+	font-size: 35px;
+	position: relative;
+}
+section.workdetail .boxdetail .wrapdetail h2:before{
+	content: "";
+	background: orange;
+	width: 80px;
+	height: 2px;
+	position: absolute;
+	bottom: -15px;
+}
+section.workdetail .boxdetail .wrapdetail p{
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	font-size: 18px;
+	margin:40px 0 0 0 ;
+}
+section.workdetail .boxdetail .wrapdetail p.second-p{
+	margin:0;
+}
+section.workdetail .boxdetail .wrapdetail p.sestwo{
+	text-align: right;
+}
+section.workdetail .boxdetail .wrapdetail ul {
+	padding:0;
+	margin:0 0 0 40px;
+}
+section.workdetail .boxdetail .wrapdetail ul li{
+	padding: 5px 0;
+    font-size: 18px;
+    color: #7d7d7d;
+}
+section.workdetail .space{
+	height: 80px;
+	background: transparent;
+}
+section.workdetail .mainmockup{
+	height: 350px;
+}
+section.workdetail .mainmockup .wrapfeature{
+	height: 100%;
+	width: 100%;
+	display: table;
+	position: absolute;
+    background: rgba(0,0,0,0.4);
+    left: 0;
+    right: 0;
+}
+section.workdetail .mainmockup .wrapfeature h2{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color:#fff;
+	font-weight: 700;
+	font-size: 50px;
+	letter-spacing: 8px;
+}
+section.workdetail .owl-theme .owl-dots .owl-dot.active span, 
+section.workdetail .owl-theme .owl-dots .owl-dot:hover span {
+    background: orange;
+}
+section.workdetail .owl-workdetail{
+	overflow: hidden;
+}
+section.workdetail .owl-workdetail .item img{
+	margin-bottom:20px;
+}
+section.workdetail .owl-workdetail .owl-item{
+	min-height: 1px;
+    float: left;
+}
+section.workdetail .owl-workdetail .owl-nav{
+	display: none !important;
+}
+
+/*  ==========================================================================
+15.  Section Responsive thing
+    -------------------------------- */
+@media only screen and (max-width: 1199px){
+	.header .mobilemenu{
+		display: block;
+	}
+	.header h1,
+	.header h1 a{
+		color:#333;
+	}
+	.header nav{
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transform:translate(0, -150px);
+		-webkit-transform:translate(0, -150px);
+		-moz-transform:translate(0, -150px);
+		-ms-transform:translate(0, -150px);
+		-o-transform:translate(0, -150px);
+		opacity: 0;
+		position: absolute;
+    	width: 100%;
+    	background: #fff;
+    	top: 22px;
+    	left:0;
+    	right:0;
+	}
+	.header nav.open{
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transform:translate(0, 0);
+		-webkit-transform:translate(0, 0);
+		-moz-transform:translate(0, 0);
+		-ms-transform:translate(0, 0);
+		-o-transform:translate(0, 0);
+		opacity: 1;
+		position: absolute;
+    	width: 100%;
+    	background: #fff;
+    	top: 22px;
+    	left:0;
+    	right:0;
+	}
+	.header nav.open ul{
+		float:none;
+		margin: 0;
+	}
+	.header nav.open ul li{
+		display: block;
+		float:none;
+	}
+	.header nav.open ul li a{
+		color:#333;
+	}
+	.header nav ul li a.active {
+	    border-bottom: 1px solid #f2f2f2;
+	}
+	.header nav ul li a:after{
+		background: transparent;
+	}
+	.header nav ul li a{
+		padding:10px 0;
+		border-bottom:1px solid #f2f2f2;
+	}
+	.header nav ul li a:hover{
+		color:orange;
+		border-bottom:1px solid orange;
+	}
+	.header nav ul li a:hover:after{
+		background: transparent;
+	}
+	.fixtop {
+		width: 100%;
+		background: rgba(255, 255, 255, 0.9);
+    	box-shadow: 0 0 1px 1px;
+	}
+	section.works .grid-item {
+	  	width: 31.2%;
+	}
+	section.service .grid-item {
+	  	width: 31.2%;
+	}
+	.overlay .wraptextabout {
+	    width: 940px;
+	}
+	section.intro .wraplefttext {
+	    display: block;
+	    height: auto;
+	    margin-bottom:40px;
+	}
+	section.contact h1:before{
+		display: none;
+	}
+	section.workdetail .boxdetail {
+	    display: block;
+	    min-height: 100%;
+    	margin-bottom: 0;
+	}
+	section.workdetail .boxdetail .wrapdetail {
+    	display: block;
+    }
+    section.workdetail .boxdetail .wrapdetail ul li{
+    	min-width: 50%;
+    	float:left;
+    }
+    section.workdetail .boxdetail:nth-of-type(2) {
+	    padding: 0;
+	    margin: 40px 15px 0;
+	}
+	section.workdetail .boxdetail .wrapdetail ul {
+		margin:0 0 0 24px;
+	}
+	section.workdetail .space:first-child {
+	    height: 0;
+	}
+	section.workdetail .boxdetail:nth-of-type(2) .wrapdetail {
+	    padding: 40px 20px;
+	}
+	section.workdetail .boxdetail .wrapdetail p.second-p {
+	    margin: 0;
+	    padding: 10px 0;
+	    line-height: 26px;
+	    width: 85%;
+	}
+	section.workdetail .boxdetail .wrapdetail p.sestwo {
+	    text-align: right;
+	    float: right;
+	    margin: 0 0 20px;
+	}
+}
+@media only screen and (max-width: 991px){
+	section.works .grid-item {
+	  	width: 47%;
+	}
+	section.service .grid-item {
+	  	width: 47%;
+	}
+	section.works .grid-item.grid-item--width2{
+		width: 98%;
+	}
+	section.works p,
+	section.team p,
+	section.service p,
+	section.contact p{
+		width: 100%;
+	}
+	.overlay .wraptextabout {
+	    width: 720px;
+	}
+	section.contact .contactleft,
+	section.contact .contactright{
+		display: block;
+		height: auto;
+	}
+	section.contact .contactright form{
+		display: block;
+	}
+}
+@media only screen and (max-width: 820px){
+	section.works .grid-item {
+	  	width: 100%;
+	}
+	section.service .grid-item {
+	  	width: 100%;
+	}
+	section.works .grid-item.grid-item--width2{
+		width: 100%;
+	}
+	section.works .grid-item.grid-item--height2{
+		height: 300px;
+	}
+	section.service .grid-item.grid-item--height2 {
+	    height: auto;
+	    width: 100%;
+	}
+}
+@media only screen and (max-width: 768px){
+	.overlay .wraptextabout {
+	    width: 100%;
+	    padding: 0 20px;
+	}
+	.overlay .wraptextabout .wraptextinnerabout h1{
+		font-size: 30px;
+	}
+}
+@media only screen and (max-width: 720px){
+	.overlay .wraptext .wraptextinner p{
+		width: 100%;
+	}
+	.overlay .wraptext .wraptextinner h2{
+		font-size: 40px;
+	}
+	.overlay .wraptext .wraptextinner h1{
+		font-size: 20px;
+	}
+	.overlay,
+	.banner{
+		height: 350px;
+	}
+	.overlayfull,
+	.bannerfull{
+		height: 100%;
+	}
+	section.works h2,
+	section.service h2,
+	section.testimoni h2,
+	section.client h2,
+	section.intro h2{
+		font-size: 25px;
+	}
+	section.intro h3 {
+	    font-size: 16px;
+	}
+	section.workdetail .mainmockup .wrapfeature h2{
+		font-size: 28px;
+	}
+}
+@media only screen and (max-width: 360px){
+	.overlay .wraptext .wraptextinner h2 {
+	    font-size: 28px;
+	}
+	.overlay .wraptext .wraptextinner h1 {
+	    font-size: 16px;
+	}
+	.overlay .wraptext .wraptextinner p {
+	    width: 85%;
+	    font-size: 16px;
+	}
+	section.works p,
+	section.service p{
+		font-size: 16px;
+	}
+	section.works .grid-item .wraptexthover h2{
+		font-size: 18px;
+	}
+	.overlay .wraptextabout .wraptextinnerabout h1 {
+	    font-size: 25px;
+	}
+	section.intro .imgright {
+	    height: 350px;
+	    width: 100%;
+	}
+}
